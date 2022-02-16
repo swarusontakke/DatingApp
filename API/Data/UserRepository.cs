@@ -47,6 +47,11 @@ namespace API.Data
              .SingleOrDefaultAsync(x => x.UserName == username);
         }
 
+        public Task GetUserByUsernameAsync(object p)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<IEnumerable<AppUser>> GetUsersAsync()
         {
            return await _context.Users
